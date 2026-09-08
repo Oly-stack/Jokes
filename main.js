@@ -21,9 +21,9 @@ darkToggle.addEventListener("click", () => {
   document.documentElement.classList.toggle("dark");
 
   if (document.documentElement.classList.contains("dark")) {
-    darkIcon.textContent = "🌞";
+    darkIcon.textContent = "☀";
   } else {
-    darkIcon.textContent = "🌙";
+    darkIcon.textContent = "☽";
   }
 });
 
