@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+      };
+    </script>
+    <style>
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) rotate(12deg);
+        }
+
+        50% {
+          transform: translateY(-15px) rotate(12deg);
+        }
+      }
+
+      .animate-float {
+        animation: float 3s ease-in-out infinite;
+      }
+    </style>
+    <script src="main.js" defer></script>
+    <link
+      rel="shortcut icon"
+      href="https://res.cloudinary.com/rghcahmu/image/upload/v1788792453/Olyverse_logo_whitebackground_h0lsoh.png"
+      type="image/x icon"
+    />
+    <title>Comedy Gold!</title>
+  </head>
+  <!-- Body -->
+  <body
+    class="min-h-screen font-['Comic_Relief'] text-[#701C45] bg-[radial-gradient(circle_at_50%_40%,#F39EB6,transparent_45%,#FDEDED)] flex items-center justify-center relative dark:bg-[#740a03] text-black dark:text-white p-4 sm:p-0"
+  >
+    <!-- Dark mode -->
+    <button
+      class="dark-toggle cursor-pointer text-3xl absolute right-4 bottom-4 lg:top-4 lg:right-4 lg:bottom-auto"
+      aria-label="Toggle Dark Mode"
+    >
+      <span class="dark-icon">🌙</span>
+    </button>
+    <!-- Logo -->
+    <a
+      href="#"
+      class="text-[1.4rem] sm:text-[2rem] font-bold tracking-tight text-[#3B1635] leading-[1.35] dark:text-white absolute top-0 left-2 m-2"
+      >C<span class="relative inline-block invisible w-[2ch]"
+        >o<span class="absolute inset-0 visible">😂</span></span
+      >medyG<span class="relative inline-block invisible w-[2ch]"
+        >o<span class="absolute inset-0 visible">😂</span></span
+      >ld!</a
+    >
+    <!-- Menu Toggle button -->
+    <button
+      class="menu-toggle cursor-pointer fixed right-4 top-0 z-50 md:hidden"
+      aria-label="Toggle Menu"
+    >
+      <span class="menu-icon text-6xl">+</span>
+    </button>
+    <!-- Nav links -->
+    <nav
+      class="links hidden absolute top-[60px] left-0 right-0 w-full flex-col items-center gap-4 bg-white py-4 shadow-[inset_0_0_10px_rgba(0,0,0,0.1)] z-40 lg:top-0 lg:left-0 lg:right-0 lg:w-full lg:flex lg:flex-row lg:justify-center lg:gap-8 lg:bg-transparent lg:py-0 lg:shadow-none text-2xl m-3"
+    >
+      <a
+        href="#"
+        class="p-5 text-[#D93675] lg:p-0 dark:text-[#3B1635] lg:dark:text-white transition hover:text-[#3B1635] hover:underline"
+        >Home
+      </a>
+      <hr class="border-0 h-px w-[85%] my-2 bg-[#701C45] md:hidden" />
+      <div class="relative">
+        <!-- Categories dropdown -->
+        <button
+          id="categories-btn"
+          class="p-5 text-[#D93675] lg:p-0 dark:text-[#3B1635] lg:dark:text-white transition hover:text-[#3B1635] hover:underline"
+        >
+          Categories
+        </button>
+
+        <div
+          id="categories-menu"
+          class="hidden absolute left-1/2 top-full z-50 mt-2 w-44 -translate-x-1/2 rounded-xl bg-white p-2 dark:text-[#3B1635] lg:dark:text-[#3B1635] shadow-lg"
+        >
+          <button
+            class="category-btn block w-full rounded-lg px-4 py-2 text-left hover:bg-[#FDEDED]"
+            data-category="Programming"
+          >
+            💻 Tech
+          </button>
+
+          <button
+            class="category-btn block w-full rounded-lg px-4 py-2 text-left hover:bg-[#FDEDED]"
+            data-category="Any"
+          >
+            🎲 Random
+          </button>
+
+          <button
+            class="category-btn block w-full rounded-lg px-4 py-2 text-left hover:bg-[#FDEDED]"
+            data-category="Dark"
+          >
+            🖤 Dark Humor
+          </button>
+
+          <button
+            class="category-btn block w-full rounded-lg px-4 py-2 text-left hover:bg-[#FDEDED]"
+            data-category="Misc"
+          >
+            🔬 Science
+          </button>
+        </div>
+      </div>
+      <hr class="border-0 h-px w-[85%] my-2 bg-[#701C45] md:hidden" />
+      <a
+        href="#"
+        class="p-5 text-[#D93675] lg:p-0 dark:text-[#3B1635] lg:dark:text-white transition hover:text-[#3B1635] hover:underline"
+        >About
+      </a>
+    </nav>
+    <!-- Decorations -->
+    <span
+      class="hidden sm:block text-[#D93675] absolute left-2 top-[10%] rotate-12 px-2 py-2 text-3xl font-bold animate-float dark:text-white lg:dark:text-white lg:right-40 lg:top-[40%] lg:px-7 lg:py-4 lg:text-5xl"
+      >LOL!</span
+    >
+    <span
+      class="absolute left-2 bottom-[20%] rotate-12 px-2 py-2 text-3xl font-bold animate-float dark:text-white lg:dark:text-white lg:right-[40] lg:bottom-[10%] lg:px-7 lg:py-4 lg:text-5xl"
+      >⚡</span
+    >
+    <span
+      class="absolute left-2 z-10 bottom-[59%] rotate-12 px-2 py-2 text-2xl font-bold animate-float dark:text-white lg:dark:text-white lg:right-40 lg:bottom-[20%] lg:px-7 lg:py-4 lg:text-3xl"
+      >✨</span
+    >
+    <span
+      class="hidden sm:block absolute right-9 top-[10%] rotate-12 px-2 py-2 text-2xl font-bold animate-float dark:text-white lg:dark:text-white lg:left-[40] lg:top-[20%] lg:px-7 lg:py-4 lg:text-3xl"
+      >🤪
+    </span>
+    <span
+      class="text-[#D93675] absolute right-2 z-10 bottom-[25%] rotate-12 px-2 py-2 text-2xl font-bold animate-float dark:text-white lg:dark:text-white lg:left-[40] lg:bottom-[10%] lg:px-7 lg:py-4 lg:text-3xl"
+      >HAHA</span
+    >
+    <span
+      class="hidden sm:block absolute right-2 top-[80%] rotate-12 px-2 py-2 text-2xl font-bold animate-float dark:text-white lg:dark:text-white lg:left-[20] lg:top-[50%] lg:px-7 lg:py-4 lg:text-3xl"
+      >✨</span
+    >
+    <!-- Joke card -->
+    <main
+      class="flex w-full max-w-3xl flex-col items-center text-center px-2 pt-12 pb-12 sm:px-4"
+    >
+      <h1
+        class="text-[1.6rem] leading-tight font-bold tracking-tight sm:text-6xl lg:text-7xl"
+      >
+        <span class="text-[#D93675] dark:text-[#280905]">Laugh More,</span>
+        <span class="text-[#3B1635] dark:text-white lg:dark:text-white"
+          >Worry Less!</span
+        >
+      </h1>
+
+      <section
+        class="relative mt-6 w-full max-w-[540px] rounded-2xl bg-white px-4 py-6 shadow-[0_20px_40px_rgba(0,0,0,0.2)] sm:mt-8 sm:px-8 sm:py-10 md:px-12 md:py-12"
+      >
+        <!-- Loading... -->
+        <div
+          id="loading"
+          class="absolute inset-6 bg-white/90 hidden items-center justify-center text-xl font-bold text-[#D93675]"
+        >
+          <span class="inline-block animate-bounce text-2xl">Loading</span>
+          <span
+            class="inline-block animate-bounce text-2xl [animation-delay:150ms]"
+            >😂</span
+          >
+          <span
+            class="inline-block animate-bounce text-2xl [animation-delay:300ms]"
+            >😂</span
+          >
+        </div>
+        <div
+          class="absolute right-5 top-0 mt-2 flex items-center justify-end gap-2"
+        >
+          <button
+            id="like-btn"
+            class="cursor-pointer text-2xl transition hover:scale-110 dark:text-[#3B1635] lg:dark:text-[#3B1635]"
+            aria-label="Like joke"
+          >
+            ♡
+          </button>
+          <button
+            id="dislike-btn"
+            class="cursor-pointer text-2xl transition hover:scale-110"
+            aria-label="Dislike joke"
+          >
+            👎
+          </button>
+        </div>
+        <h1
+          id="joke-id"
+          class="text-[#D93675] dark:text-[#280905] text-3xl"
+        ></h1>
+        <p id="joke-text" class="text-[#3B1635]"></p>
+      </section>
+      <button
+        id="next-joke"
+        class="mt-6 rounded-full bg-[#D93675] px-8 py-3 text-lg font-bold text-white dark:bg-[#280905] transition hover:scale-105 hover:bg-[#701C45]"
+      >
+        Next Joke
+      </button>
+    </main>
+
+    <footer
+      class="absolute bottom-4 text-sm text-[#701C45]/70 dark:text-white/70"
+    >
+      Made with ❤️ by
+      <span class="font-bold text-[#D93675] dark:text-[#280905]"
+        >Oly_Verse</span
+      >
+    </footer>
+  </body>
+</html>
