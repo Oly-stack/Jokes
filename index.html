@@ -45,12 +45,20 @@
     class="min-h-screen font-['Comic_Relief'] text-[#701C45] bg-[radial-gradient(circle_at_50%_40%,#F39EB6,transparent_45%,#FDEDED)] flex items-center justify-center relative dark:bg-[#740a03] text-black dark:text-white p-4 sm:p-0"
   >
     <!-- Dark mode -->
-    <button
-      class="dark-toggle cursor-pointer text-3xl absolute right-4 bottom-4 lg:top-4 lg:right-4 lg:bottom-auto"
-      aria-label="Toggle Dark Mode"
-    >
-      <span class="dark-icon text-6xl font-bold text-[#3B1635]">☽</span>
-    </button>
+    <div
+  class="absolute right-4 bottom-4 lg:top-4 lg:right-4 lg:bottom-auto flex items-center gap-1"
+>
+  <div class="flex flex-col leading-none text-right">
+    <span class="text-sm font-bold text-[#3B1635]">Dark</span>
+    <span class="text-sm font-bold text-[#3B1635]">Mode</span>
+  </div>
+  <button
+    class="dark-toggle cursor-pointer"
+    aria-label="Toggle Dark Mode"
+  >
+    <span id="dark-icon" class="text-6xl font-bold text-[#3B1635]">☽</span>
+  </button>
+</div>
     <!-- Logo -->
     <a
       href="#"
