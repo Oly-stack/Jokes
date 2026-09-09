@@ -15,7 +15,7 @@ menuToggle.addEventListener("click", () => {
 
 // Dark mode
 const darkToggle = document.querySelector(".dark-toggle");
-const darkIcon = document.querySelector(".dark-icon");
+const darkIcon = document.getElementById("dark-icon"); 
 
 darkToggle.addEventListener("click", () => {
   document.documentElement.classList.toggle("dark");
